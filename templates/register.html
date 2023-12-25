@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block title %}Register{% endblock %}
+{% block head %}
+  {{ super() }}
+  <style type="text/css">
+    .important { color: #336699; }
+  </style>
+{% endblock %}
+{% block content %}
+  <h1>Register</h1>
+  <p class="important">
+    <form action="/register" method="post">
+        <input type="text" name="username" placeholder="Username"><br>
+        <input type="password" name="password" placeholder="Password"><br>
+        <input type="submit" value="Register">
+    </form>
+    <h1 style="background-color: red;">{{error}}</h1>
+{% endblock %}
